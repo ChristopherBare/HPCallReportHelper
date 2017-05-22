@@ -36,15 +36,4 @@ footer p {
 form {
   padding-top: 0px;
   padding-bottom: 0px;
-  width: 100px;
-  height: 40px;
-
-}
-@media all and (orientation:portrait) {
-  form {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    width: auto;
-    height: 40px;
-  }
 }
