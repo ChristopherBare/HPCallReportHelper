@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" src="hpIcon.jpg">
+
+  <title>HP Call Report Tracker</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="jumbotron.css" rel="stylesheet">
+  <script type="text/javascript" src="HPCRH.js"></script>
+  <style id="style-1-cropbar-clipper">
+    /* Copyright 2014 Evernote Corporation. All rights reserved. */
+
+    .en-markup-crop-options {
+      top: 18px !important;
+      left: 50% !important;
+      margin-left: -100px !important;
+      width: 200px !important;
+      border: 2px rgba(255, 255, 255, .38) solid !important;
+      border-radius: 4px !important;
+    }
+
+
+    .en-markup-crop-options div div:first-of-type {
+      margin-left: 0px !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <a class="navbar-brand" href="#">Marketsource</a>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="nav navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+        <!--First Dropdown - This needs to be fixed. Should change the text when clicked to the store that was selected.-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="StoreType">Store Type</span></a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" id="100" onclick="setStoreType(100);" href="#">Best Buy</a>
+            <a class="dropdown-item" id="101" onclick="setStoreType(101);" href="#">Office Deopt</a>
+            <a class="dropdown-item" id="102" onclick="setStoreType(102);" href="#">Office Max</a>
+            <a class="dropdown-item" id="103" onclick="setStoreType(103);" href="#">Staples</a>
+            <a class="dropdown-item" id="104" onclick="setStoreType(104);" href="#">Costco</a>
+          </div>
+        </li>
+        <!--Second Dropdown - This needs to do the same as the first one. Display the selected hours in the box when clicked.-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="Hours">Hours</span></a>
+          <div class="dropdown-menu" aria-labelledby="dropdown02">
+            <a class="dropdown-item" onclick="setHours(200);" id="200" href="#">1</a>
+            <a class="dropdown-item" id="201" onclick="setHours(201);" href="#">2</a>
+            <a class="dropdown-item" id="202" onclick="setHours(202);" href="#">3</a>
+            <a class="dropdown-item" id="203" onclick="setHours(203);" href="#">4</a>
+            <a class="dropdown-item" id="204" onclick="setHours(204);" href="#">5</a>
+            <a class="dropdown-item" id="205" onclick="setHours(205);" href="#">6</a>
+            <a class="dropdown-item" id="206" onclick="setHours(206);" href="#">7</a>
+            <a class="dropdown-item" id="207" onclick="setHours(207);" href="#">8</a>
+          </div>
+        </li>
+        <!--  Second Dropdown
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown02">
+            <a class="dropdown-item" href="#">Login</a>
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="email" class="form-control" name="username" placeholder="Marketsource Email">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-default">Sign In</button>
+            </form>
+            </a>
+          </div>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main jumbotron for a primary marketing message or call to action
+
+    Needs to have a background of the HP logo (new) -->
+  <div class="jumbotron">
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Deskjet and Sprocket</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary" onclick="decrease(0);" role="button">Less</button></span>
+        <span class="displayValue" id="0"> 0 </span>
+        <span><button type="button"  class="btn btn-outline-primary" onclick="increase(0);" role="button">More </button></span>
+
+      </div>
+      <div class="col-lg-12">
+        <br>
+        <h2>Envy</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="decrease(1);" role="button">Less</button></span>
+        <span class="displayValue" id="1"> 0 </span>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="increase(1);" role="button">More </button></span>
+
+      </div>
+      <div class="col-lg-12">
+        <br>
+        <h2>Officejet</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="decrease(2);" role="button">Less</button></span>
+        <span class="displayValue" id="2"> 0 </span>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="increase(2);" role="button">More </button></span>
+
+      </div>
+
+      <div class="col-lg-12">
+        <br>
+        <h2>Officejet Pro & PW</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="decrease(3);" role="button">Less</button></span>
+        <span class="displayValue" id="3"> 0 </span>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="increase(3);" role="button">More </button></span>
+
+      </div>
+      <div class="col-lg-12">
+        <br>
+        <h2>Laser Single Function</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="decrease(4);" role="button">Less</button></span>
+        <span class="displayValue" id="4"> 0 </span>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="increase(4);" role="button">More </button></span>
+
+      </div>
+      <div class="col-lg-12">
+        <br>
+        <h2>Laser AiO</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="decrease(5);" role="button">Less</button></span>
+        <span class="displayValue" id="5"> 0 </span>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="increase(5);" role="button">More </button></span>
+
+      </div>
+      <div class="col-lg-12">
+        <br>
+        <h2>Ink</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="decrease(6);" role="button">Less</button></span>
+        <span class="displayValue" id="6"> 0 </span>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="increase(6);" role="button">More </button></span>
+
+      </div>
+      <div class="col-lg-12">
+        <br>
+        <h2>Instant Ink</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="decrease(7);" role="button">Less</button></span>
+        <span class="displayValue" id="7"> 0 </span>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="increase(7);" role="button">More </button></span>
+
+      </div>
+      <div class="col-lg-12">
+        <br>
+        <h2>Toner</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="decrease(8);" role="button">Less</button></span>
+        <span class="displayValue" id="8"> 0 </span>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="increase(8);" role="button">More </button></span>
+
+      </div>
+      <div class="col-lg-12">
+        <br>
+        <h2>Paper and Photo Media</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="decrease(9);" role="button">Less</button></span>
+        <span class="displayValue" id="9"> 0 </span>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="increase(9);" role="button">More </button></span>
+
+      </div>
+      <div class="col-lg-12">
+        <br>
+        <h2>Laptops</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="decrease(10);" role="button">Less</button></span>
+        <span class="displayValue" id="10"> 0 </span>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="increase(10);" role="button">More </button></span>
+
+      </div>
+      <div class="col-lg-12">
+        <br>
+        <h2>Desktops</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="decrease(11);" role="button">Less</button></span>
+        <span class="displayValue" id="11"> 0 </span>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="increase(11);" role="button">More </button></span>
+
+      </div>
+      <div class="col-lg-12">
+        <br>
+        <h2>HP PC Accessories</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="decrease(12);" role="button">Less</button></span>
+        <span class="displayValue" id="12"> 0 </span>
+        <span><button type="button" class="btn btn-outline-primary"  onclick="increase(12);" role="button">More </button></span>
+
+      </div>
+
+      <div class="col-lg-12">
+        <br>
+        <h2>Monitors</h2>
+        <br>
+        <span><button type="button" class="btn btn-outline-primary" onclick="decrease(13);" role="button">Less</button></span>
+        <span class="displayValue" id="13"> 0 </span>
+        <span><button type="button" class="btn btn-outline-primary" onclick="increase(13);" role="button">More </button></span>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <!--This is to allow the user to save their data to a server. Needs to be implemented. -->
+  <div class="container">
+    <button type="button" class="js-recap-copy-btn btn btn-success btn-block" data-toggle="modal" data-target="#exportModal">Export Event Data</button>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exportModal" tabindex="-1" role="dialog" aria-labelledby="exportModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exportModalLabel">Recap Info</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Recap <span id="storeType"></span> <span id="storeNumber"></span>
+          <br> Hours: <span id="hours"></span>
+          <br> Deskjet and Sprocket: <span id="20"> 0 </span>
+          <br> Envy: <span id="21"> 0 </span>
+          <br> Officejet: <span id="22"> 0 </span>
+          <br> Officejet Pro & PW: <span id="23"> 0 </span>
+          <br> Laser Single Function: <span id="24"> 0 </span>
+          <br> Laser AiO: <span id="25"> 0 </span>
+          <br> Ink: <span id="26"> 0 </span>
+          <br> Instant Ink: <span id="27"> 0 </span>
+          <br> Toner: <span id="28"> 0 </span> Paper and Photo Media: <span id="29"> 0 </span>
+          <br> Laptops: <span id="30"> 0 </span>
+          <br> Desktops: <span id="31"> 0 </span>
+          <br> HP PC Accessories: <span id="32"> 0 </span>
+          <br> Monitors: <span id="33"> 0 </span>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Copy To Clipboard</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Change -->
+  <br>
+  <!--Reset button for all values
+  Move this to the dropdown bar later.
+  -->
+  <div class="container">
+    <button type="button" onclick="reset();" class="btn btn-danger btn-block">Reset</button>
+  </div>
+  <hr>
+
+  <footer>
+    <p id="footer"> © Christopher Bare 2017</p>
+  </footer>
+  </div>
+  <!-- /container -->
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="jquery-3.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="/jquery.min.js"><\/script>')
+  </script>
+  <script src="tether.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="bootstrap.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="ie10-viewport-bug-workaround.js"></script>
+
+
+</body>
+
+</html>
