@@ -12,10 +12,10 @@ exportDataButton.addEventListener('click', function(event) {
   copyTextToClipboard(text);
 });
 
-//Javascript for the dropdown toggle
+//Dropdown toggle
 $('.dropdown-toggle').dropdown();
-$('#dropdown01 a').click(function(){
-$('#StoreType').text($(this).html());
+$('#dropdown01 a').click(function() {
+  $('#StoreType').text($(this).html());
 });
 
 /**
@@ -25,7 +25,7 @@ of the item input and increase it.
 function increase(int) {
   array[int]++;
   document.getElementById(int).innerHTML = array[int];
-  document.getElementById(int+20).innerHTML = array[int];
+  document.getElementById(int + 20).innerHTML = array[int];
 }
 /**
 A function to take in the count
@@ -37,7 +37,7 @@ function decrease(int) {
     array[int] = 0;
   }
   document.getElementById(int).innerHTML = array[int];
-  document.getElementById(int+20).innerHTML = array[int];
+  document.getElementById(int + 20).innerHTML = array[int];
 }
 
 /**
@@ -104,15 +104,16 @@ function reset() {
   for (j = 0; j < array.length; j++) {
     array[j] = 0;
     document.getElementById(j).innerHTML = array[j];
-    document.getElementById(j+20).innerHTML = array[j];
+    document.getElementById(j + 20).innerHTML = array[j];
   }
 }
 /**
 Function that populates the text variable above.
 */
 function setStoreType(store) {
-  document.getElementById(storeType).innerHTML = stores[store-100];
+  document.getElementById(storeType).innerHTML = stores[store - 100];
 }
+
 function setHours(hour) {
-  document.getElementById(hours).innerHTML = hours[hour-200];
+  document.getElementById(hours).innerHTML = hours[hour - 200];
 }

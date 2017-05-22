@@ -24,3 +24,16 @@ footer p {
   margin-right: auto;
   text-align: center;
 }
+.navbar-input-group input {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.navbar-input-group .btn {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left: 0px;
+}
+form {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
