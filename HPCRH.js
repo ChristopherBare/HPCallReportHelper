@@ -14,8 +14,8 @@ exportDataButton.addEventListener('click', function(event) {
 
 //Dropdown toggle
 $('.dropdown-toggle').dropdown();
-$('#dropdown01 a').click(function() {
-  $('#StoreType').text($(this).html());
+$('#dropdownStore > a').on('click', function() {
+  $('#StoreType').html($(this).find('a').html());
 });
 
 /**
@@ -111,9 +111,9 @@ function reset() {
 Function that populates the text variable above.
 */
 function setStoreType(store) {
-  document.getElementById(storeType).innerHTML = stores[store - 100];
+  //document.getElementById(storeType).innerHTML = stores[store - 100];
 }
 
 function setHours(hour) {
-  document.getElementById(hours).innerHTML = hours[hour - 200];
+  document.getElementById(ModalHours).innerHTML = hours[hour - 200];
 }
