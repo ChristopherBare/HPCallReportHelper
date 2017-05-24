@@ -12,11 +12,7 @@ exportDataButton.addEventListener('click', function(event) {
   copyTextToClipboard(text);
 });
 
-//Dropdown toggle
-$('.dropdown-toggle').dropdown();
-$('#dropdownStore > a').on('click', function() {
-  $('#StoreType').html($(this).find('a').html());
-});
+
 
 /**
 A function to take in the count
@@ -111,7 +107,7 @@ function reset() {
 Function that populates the text variable above.
 */
 function setStoreType(store) {
-  //document.getElementById(storeType).innerHTML = stores[store - 100];
+  document.getElementById(storeType).innerHTML = stores[store - 100];
 }
 
 function setHours(hour) {

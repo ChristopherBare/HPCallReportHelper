@@ -17,6 +17,7 @@
   <!-- Custom styles for this template -->
   <link href="jumbotron.css" rel="stylesheet">
   <script type="text/javascript" src="HPCRH.js"></script>
+
   <style id="style-1-cropbar-clipper">
     /* Copyright 2014 Evernote Corporation. All rights reserved. */
 
@@ -43,10 +44,15 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     <a class="navbar-brand" href="#">Marketsource</a>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js">
+    //Dropdown toggle
+    $(".dropdown-item").on("click", function(){
+     $("#StoreType").text($(this).text());
+    });
+    </script>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="nav navbar-nav">
-        
+
 
         <!--First Dropdown - This needs to be fixed. Should change the text when clicked to the store that was selected.-->
         <li class="nav-item dropdown">
