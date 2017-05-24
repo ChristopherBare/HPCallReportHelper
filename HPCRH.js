@@ -107,7 +107,7 @@ function reset() {
 Function that populates the text variable above.
 */
 function setStoreType(store) {
-  document.getElementById(storeType).innerHTML = stores[store - 100];
+//  document.getElementById(storeType).innerHTML = stores[store - 100];
 }
 
 function setHours(hour) {
