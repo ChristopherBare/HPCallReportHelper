@@ -7,10 +7,10 @@ var hours = [1, 2, 3, 4, 5, 6, 7, 8];
 //Text to copy to copyTextToClipboard
 var text = "";
 //Event listener for the save() function.
-var exportDataButton = document.querySelector('.js-recap-copy-btn');
+/*var exportDataButton = document.querySelector('.js-recap-copy-btn');
 exportDataButton.addEventListener('click', function(event) {
   copyTextToClipboard(text);
-});
+});*/
 
 
 
@@ -107,7 +107,7 @@ function reset() {
 Function that populates the text variable above.
 */
 function setStoreType(store) {
-//  document.getElementById(storeType).innerHTML = stores[store - 100];
+  //  document.getElementById(storeType).innerHTML = stores[store - 100];
 }
 
 function setHours(hour) {
