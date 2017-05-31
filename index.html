@@ -45,11 +45,11 @@
       </button>
     <a class="navbar-brand" href="#">Marketsource</a>
     <script src="jquery-3.js">
-    //Dropdown toggle
-    console.log("It ran!");
-    $(".dropdown-item").on("click", function(){
-     $("#StoreType").text($(this).text());
-    });
+      //Dropdown toggle
+      console.log("It ran!");
+      $(".dropdown-item").on("click", function() {
+        $("#StoreType").text($(this).text());
+      });
     </script>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="nav navbar-nav">
@@ -57,14 +57,13 @@
 
         <!--First Dropdown - This needs to be fixed. Should change the text when clicked to the store that was selected.-->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false"><span id="StoreType">Store Type</span></a>
+          <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="StoreType">Store Type</span></a>
           <div id="dropdownStore" class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" id="100" onclick="setStoreType(100);"  >Best Buy</a>
-            <a class="dropdown-item" id="101" onclick="setStoreType(101);"  >Office Deopt</a>
-            <a class="dropdown-item" id="102" onclick="setStoreType(102);"  >Office Max</a>
-            <a class="dropdown-item" id="103" onclick="setStoreType(103);"  >Staples</a>
-            <a class="dropdown-item" id="104" onclick="setStoreType(104);"  >Costco</a>
+            <a class="dropdown-item" id="100" onclick="setStoreType(100);">Best Buy</a>
+            <a class="dropdown-item" id="101" onclick="setStoreType(101);">Office Deopt</a>
+            <a class="dropdown-item" id="102" onclick="setStoreType(102);">Office Max</a>
+            <a class="dropdown-item" id="103" onclick="setStoreType(103);">Staples</a>
+            <a class="dropdown-item" id="104" onclick="setStoreType(104);">Costco</a>
           </div>
         </li>
         <!--StoreNumber Input box-->
@@ -78,17 +77,16 @@
 
         <!--Second Dropdown - This needs to do the same as the first one. Display the selected hours in the box when clicked.-->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false"><span id="Hours">Hours</span></a>
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="Hours">Hours</span></a>
           <div class="dropdown-menu" aria-labelledby="dropdown02">
-            <a class="dropdown-item" onclick="setHours(200);" id="200"  >1</a>
-            <a class="dropdown-item" id="201" onclick="setHours(201);"  >2</a>
-            <a class="dropdown-item" id="202" onclick="setHours(202);"  >3</a>
-            <a class="dropdown-item" id="203" onclick="setHours(203);"  >4</a>
-            <a class="dropdown-item" id="204" onclick="setHours(204);"  >5</a>
-            <a class="dropdown-item" id="205" onclick="setHours(205);"  >6</a>
-            <a class="dropdown-item" id="206" onclick="setHours(206);"  >7</a>
-            <a class="dropdown-item" id="207" onclick="setHours(207);"  >8</a>
+            <a class="dropdown-item" onclick="setHours(200);" id="200">1</a>
+            <a class="dropdown-item" id="201" onclick="setHours(201);">2</a>
+            <a class="dropdown-item" id="202" onclick="setHours(202);">3</a>
+            <a class="dropdown-item" id="203" onclick="setHours(203);">4</a>
+            <a class="dropdown-item" id="204" onclick="setHours(204);">5</a>
+            <a class="dropdown-item" id="205" onclick="setHours(205);">6</a>
+            <a class="dropdown-item" id="206" onclick="setHours(206);">7</a>
+            <a class="dropdown-item" id="207" onclick="setHours(207);">8</a>
           </div>
         </li>
         <!--  Second Dropdown
@@ -264,7 +262,7 @@
   <br>
   <br>
   <br>
-  <!--This is to allow the user to save their data to a server. Needs to be implemented. -->
+  <!--This is to allow the user to save their data -->
   <div class="container">
     <button type="button" class="js-recap-copy-btn btn btn-success btn-block" data-toggle="modal" data-target="#exportModal">Export Event Data</button>
   </div>
@@ -279,7 +277,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-         </div>
+        </div>
         <div class="modal-body">
           Recap <span id="storeType"> Best Buy </span> <span id="storeNumber"></span>
           <br> Hours: <span id="ModalHours"></span>
