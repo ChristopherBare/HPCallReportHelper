@@ -111,5 +111,5 @@ function setStoreType(store) {
 }
 
 function setHours(hour) {
-  document.getElementById(ModalHours).innerHTML = hours[hour - 200];
+  //document.getElementById(ModalHours).innerHTML = hours[hour - 200];
 }
