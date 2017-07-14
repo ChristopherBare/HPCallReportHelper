@@ -16,6 +16,7 @@
 
   <!-- Custom styles for this template -->
   <link href="jumbotron.css" rel="stylesheet">
+  <script type="text/javascript" src="jquery-3.js"></script>
   <script type="text/javascript" src="HPCRH.js"></script>
 
   <style id="style-1-cropbar-clipper">
@@ -40,30 +41,27 @@
 <body>
 
   <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+      aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     <a class="navbar-brand" href="#">Marketsource</a>
-    <script src="jquery-3.js">
-      //Dropdown toggle
-      console.log("It ran!");
-      $(".dropdown-item").on("click", function() {
-        $("#StoreType").text($(this).text());
-      });
-    </script>
+    <script src="jquery-3.js"></script>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="nav navbar-nav">
 
 
         <!--First Dropdown - This needs to be fixed. Should change the text when clicked to the store that was selected.-->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="StoreType">Store Type</span></a>
+          <a class="nav-link dropdown-toggle" id="StoreType" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Store Type</a>
           <div id="dropdownStore" class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" id="100" onclick="setStoreType(100);">Best Buy</a>
-            <a class="dropdown-item" id="101" onclick="setStoreType(101);">Office Deopt</a>
-            <a class="dropdown-item" id="102" onclick="setStoreType(102);">Office Max</a>
-            <a class="dropdown-item" id="103" onclick="setStoreType(103);">Staples</a>
-            <a class="dropdown-item" id="104" onclick="setStoreType(104);">Costco</a>
+            <a class="dropdown-item" id="100">Best Buy</a>
+            <a class="dropdown-item" id="101">Office Deopt</a>
+            <a class="dropdown-item" id="102">Office Max</a>
+            <a class="dropdown-item" id="103">Staples</a>
+            <a class="dropdown-item" id="104">Costco</a>
           </div>
         </li>
         <!--StoreNumber Input box-->
@@ -77,7 +75,8 @@
 
         <!--Second Dropdown - This needs to do the same as the first one. Display the selected hours in the box when clicked.-->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="Hours">Hours</span></a>
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"><span id="Hours">Hours</span></a>
           <div class="dropdown-menu" aria-labelledby="dropdown02">
             <a class="dropdown-item" onclick="setHours(200);" id="200">1</a>
             <a class="dropdown-item" id="201" onclick="setHours(201);">2</a>
@@ -89,24 +88,7 @@
             <a class="dropdown-item" id="207" onclick="setHours(207);">8</a>
           </div>
         </li>
-        <!--  Second Dropdown
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown02">
-            <a class="dropdown-item" href="#">Login</a>
-            <form class="navbar-form navbar-right" role="search">
-              <div class="form-group">
-                <input type="email" class="form-control" name="username" placeholder="Marketsource Email">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="Password">
-              </div>
-              <button type="submit" class="btn btn-default">Sign In</button>
-            </form>
-            </a>
-          </div>
-          </a>
-        </li> -->
+        
       </ul>
     </div>
   </nav>
@@ -264,12 +246,14 @@
   <br>
   <!--This is to allow the user to save their data -->
   <div class="container">
-    <button type="button" class="js-recap-copy-btn btn btn-success btn-block" data-toggle="modal" data-target="#exportModal">Export Event Data</button>
+    <button type="button" class="js-recap-copy-btn btn btn-success btn-block" data-toggle="modal"
+      data-target="#exportModal">Export Event Data</button>
   </div>
 
 
   <!-- Modal -->
-  <div class="modal fade" id="exportModal" tabindex="-1" role="dialog" aria-labelledby="exportModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exportModal" tabindex="-1" role="dialog" aria-labelledby="exportModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -332,12 +316,7 @@
   <!-- Bootstrap core JavaScript: I feel like this is where the problem lies...
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="jquery-3.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script>
-    window.jQuery || document.write('<script src="/jquery.min.js"><\/script>')
-  </script>
-  <script src="tether.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="bootstrap.js"></script>
+    <script src="bootstrap.js"></script>
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <script src="ie10-viewport-bug-workaround.js"></script>
 
