@@ -12,13 +12,6 @@ exportDataButton.addEventListener('click', function(event) {
   copyTextToClipboard(text);
 });*/
 
-//Dropdown toggle
-
-$(document).ready(function() {
-  $(".dropdown-item").on("click", function() {
-    $("nav-link dropdown-toggle #StoreType").html((this).text());
-  });
-});
 
 /**
 A function to take in the count
