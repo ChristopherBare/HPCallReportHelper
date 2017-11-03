@@ -7,16 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" src="hpIcon.jpg">
+  <link rel="icon" src="img/hpIcon.jpg">
 
   <title>HP Call Report Tracker</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="jumbotron.css" rel="stylesheet">
-  <script type="text/javascript" src="HPCRH.js"></script>
+  <link href="css/jumbotron.css" rel="stylesheet">
+  <script scr="js/jquery-3.js"></script>
+  <script src="js/tether.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+  <script type="text/javascript" src="js/HPCRH.js"></script>
 
   <style id="style-1-cropbar-clipper">
     /* Copyright 2014 Evernote Corporation. All rights reserved. */
@@ -44,7 +50,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     <a class="navbar-brand" href="#">Marketsource</a>
-    <script src="jquery-3.js">
+    <script>
       //Dropdown toggle
       console.log("It ran!");
       $(".dropdown-item").on("click", function() {
@@ -89,24 +95,6 @@
             <a class="dropdown-item" id="207" onclick="setHours(207);">8</a>
           </div>
         </li>
-        <!--  Second Dropdown
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown02">
-            <a class="dropdown-item" href="#">Login</a>
-            <form class="navbar-form navbar-right" role="search">
-              <div class="form-group">
-                <input type="email" class="form-control" name="username" placeholder="Marketsource Email">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="Password">
-              </div>
-              <button type="submit" class="btn btn-default">Sign In</button>
-            </form>
-            </a>
-          </div>
-          </a>
-        </li> -->
       </ul>
     </div>
   </nav>
@@ -330,15 +318,7 @@
 
   <!-- Bootstrap core JavaScript: I feel like this is where the problem lies...
     ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="jquery-3.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script>
-    window.jQuery || document.write('<script src="/jquery.min.js"><\/script>')
-  </script>
-  <script src="tether.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="bootstrap.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="ie10-viewport-bug-workaround.js"></script>
+
 
 
 </body>
