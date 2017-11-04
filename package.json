@@ -1,0 +1,10 @@
+{
+  "name": "HPCallReportHelper",
+  "version": "1.0.0",
+  "description": "Call report tracker app for Marketsource",
+  "main": "index.html",
+  "repository": "https://github.com/ChristopherBare/HPCallReportHelper.git",
+  "author": "Christopher Bare <christopherbare@outlook.com>",
+  "license": "MIT",
+  "private": false
+}
