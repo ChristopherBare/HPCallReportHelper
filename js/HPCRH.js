@@ -12,8 +12,13 @@ exportDataButton.addEventListener('click', function(event) {
   copyTextToClipboard(text);
 });*/
 
-
-
+/**
+Jquery for the navbar
+*/
+console.log("It ran!");
+$(".dropdown-item").on("click", function() {
+  $("#StoreType").text($(this).text());
+});
 /**
 A function to take in the count
 of the item input and increase it.
